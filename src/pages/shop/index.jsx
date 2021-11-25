@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Card, Container } from "./style";
+import toast from "react-hot-toast";
 import {
   addToCartThunk,
   incrementToProductThunk,
@@ -22,6 +23,7 @@ export const Shop = () => {
   };
 
   const handleShop = (product) => {
+    toast.success("Produto adicionado ao carrinho");
     if (cart.every((item) => item.id !== product.id)) {
       return addNewProduct({ ...product, quantity: 1 });
     }

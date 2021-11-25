@@ -65,7 +65,14 @@ export const Cart = () => {
       <Sumary>
         <h2>Resumo</h2>
         <div>
-          <p>{cart.length === 1 ? `1 produto` : `${cart.length} produtos`}</p>
+          <p>
+            {cart.reduce((acc, item) => acc + item.quantity, 0) === 1
+              ? `1 produto`
+              : `${cart.reduce(
+                  (acc, item) => acc + item.quantity,
+                  0
+                )} produtos`}
+          </p>
           <span>
             {formatValue(
               cart.reduce((acc, item) => acc + item.quantity * item.price, 0)
