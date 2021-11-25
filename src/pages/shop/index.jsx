@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Container } from "./style";
+import { Card, Container } from "./style";
 import {
   addToCartThunk,
   incrementToProductThunk,
@@ -30,14 +30,14 @@ export const Shop = () => {
     <Container>
       <ul>
         {products.map((product) => (
-          <li key={product.id}>
+          <Card key={product.id}>
             <img src={product.image} alt="" />
             <h2>{product.name}</h2>
             <span>{product.price}</span>
             <button onClick={() => handleShop(product)}>
               Adicionar ao Carrinho
             </button>
-          </li>
+          </Card>
         ))}
       </ul>
     </Container>

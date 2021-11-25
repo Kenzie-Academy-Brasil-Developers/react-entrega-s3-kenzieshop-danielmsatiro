@@ -1,8 +1,8 @@
-import { Badge, IconButton } from "@material-ui/core";
+import { Badge, Divider, IconButton } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
-import { Container } from "./style";
+import { Container, Content } from "./style";
 import { MdLogin } from "react-icons/md";
 
 export const Header = () => {
@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <Container>
       <h1>Baby's Kenzie Shop</h1>
-      <div>
+      <Content>
         <IconButton aria-label="cart" onClick={() => history.push("/cart")}>
           <Badge badgeContent={cart.length} color="primary">
             <ShoppingCart />
@@ -21,7 +21,8 @@ export const Header = () => {
         <IconButton>
           <MdLogin />
         </IconButton>
-      </div>
+      </Content>
+      <Divider component="hr" />
     </Container>
   );
 };

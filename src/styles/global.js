@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 100%;
         font: inherit;
         vertical-align: baseline;
+        box-sizing: border-box;
     }
     /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure, 
@@ -46,11 +47,26 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     :root{
+        --background-color: #FFDEFF;
+        --dark-green: #79A860;
+        --light-gren: #D0F5BC;
+        --purple: #A871A8;
+        --pink: #F5BDF5;
         /* Variáveis das cores */
     }
 
-    body, input, button {
+    body {
+        background-color: var(--background-color);
+        font-family: 'Roboto';
+    }
 
+    h1 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    h2{
+        font-size: 1.1rem;
+        font-weight: bold;
     }
 
     /* outros elementos que talvez eu queira estilizar */
