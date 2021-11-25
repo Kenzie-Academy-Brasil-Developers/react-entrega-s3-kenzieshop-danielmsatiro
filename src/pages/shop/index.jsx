@@ -5,6 +5,7 @@ import {
   incrementToProductThunk,
 } from "../../store/modules/cart/thunks";
 import { formatValue } from "../../utils/formatValue";
+import { ButtonMain } from "../../components/ButtonMain";
 
 export const Shop = () => {
   const { products, cart } = useSelector((store) => store);
@@ -35,9 +36,9 @@ export const Shop = () => {
             <img src={product.image} alt="" />
             <h2>{product.name}</h2>
             <span>{formatValue(product.price)}</span>
-            <button onClick={() => handleShop(product)}>
+            <ButtonMain onClick={() => handleShop(product)}>
               Adicionar ao Carrinho
-            </button>
+            </ButtonMain>
           </Card>
         ))}
       </ul>

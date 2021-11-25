@@ -10,6 +10,7 @@ export const Container = styled.div`
     font-family: "Pacifico";
     color: #79a860;
     text-shadow: 1px 1px 2px black;
+    cursor: pointer;
   }
   hr {
     width: 100%;

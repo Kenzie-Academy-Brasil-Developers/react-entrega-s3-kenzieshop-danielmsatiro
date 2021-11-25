@@ -24,14 +24,31 @@ export const Card = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  border: transparent solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0px;
+  background-image: linear-gradient(transparent, var(--light-green));
+  box-shadow: 2px 2px 5px 1px var(--purple);
+  max-width: 1600px;
   img {
     border-radius: 5px;
-    border: solid 1px var(--purple);
     box-shadow: 2px 2px 5px 1px var(--dark-green);
-    margin-bottom: 10px;
   }
   h2 {
-    margin-bottom: 10px;
     text-shadow: 1px 1px 2px var(--dark-green);
+    text-align: center;
+  }
+  span {
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 2px white;
+  }
+  img,
+  h2,
+  span,
+  button {
+    margin-bottom: 15px;
   }
 `;

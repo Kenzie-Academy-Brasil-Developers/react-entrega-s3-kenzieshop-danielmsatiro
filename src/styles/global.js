@@ -49,7 +49,7 @@ export const GlobalStyle = createGlobalStyle`
     :root{
         --background-color: #FFDEFF;
         --dark-green: #79A860;
-        --light-gren: #D0F5BC;
+        --light-green: #D0F5BC;
         --purple: #A871A8;
         --pink: #F5BDF5;
         /* Variáveis das cores */
@@ -70,7 +70,4 @@ export const GlobalStyle = createGlobalStyle`
         color: #A871A8;
     }
 
-    /* outros elementos que talvez eu queira estilizar */
-    
-        
-        `;
+`;

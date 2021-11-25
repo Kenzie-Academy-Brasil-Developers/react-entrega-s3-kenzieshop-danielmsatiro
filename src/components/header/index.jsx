@@ -11,7 +11,7 @@ export const Header = () => {
 
   return (
     <Container>
-      <h1>Baby's Kenzie Shop</h1>
+      <h1 onClick={() => history.push("/")}>Baby's Kenzie Shop</h1>
       <Content>
         <IconButton aria-label="cart" onClick={() => history.push("/cart")}>
           <Badge badgeContent={cart.length} color="primary">
