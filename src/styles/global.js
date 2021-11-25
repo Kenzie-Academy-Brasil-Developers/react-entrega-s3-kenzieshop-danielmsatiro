@@ -67,6 +67,7 @@ export const GlobalStyle = createGlobalStyle`
     h2{
         font-size: 1.1rem;
         font-weight: bold;
+        color: #A871A8;
     }
 
     /* outros elementos que talvez eu queira estilizar */

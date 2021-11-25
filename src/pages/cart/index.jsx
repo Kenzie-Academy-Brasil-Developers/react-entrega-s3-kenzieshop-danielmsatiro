@@ -5,6 +5,7 @@ import {
   incrementToProductThunk,
   removeToCartThunk,
 } from "../../store/modules/cart/thunks";
+import { formatValue } from "../../utils/formatValue";
 import { Container } from "./style";
 
 export const Cart = () => {
@@ -34,7 +35,7 @@ export const Cart = () => {
             <button onClick={() => dispatch(decrementToProductThunk(product))}>
               -
             </button>
-            <span> Total {product.price * product.quantity}</span>
+            <span> Total {formatValue(product.price * product.quantity)}</span>
             <button onClick={() => removeProduct(product)}>
               Remover produto
             </button>
@@ -45,7 +46,9 @@ export const Cart = () => {
         <h2>Resumo</h2>
         <p>{cart.length === 1 ? `1 produto` : `${cart.length} produtos`}</p>
         <p>
-          R$ {cart.reduce((acc, item) => acc + item.quantity * item.price, 0)}
+          {formatValue(
+            cart.reduce((acc, item) => acc + item.quantity * item.price, 0)
+          )}
         </p>
         <button>Finalizar Pedido</button>
       </div>

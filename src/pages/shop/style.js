@@ -32,5 +32,6 @@ export const Card = styled.li`
   }
   h2 {
     margin-bottom: 10px;
+    text-shadow: 1px 1px 2px var(--dark-green);
   }
 `;
