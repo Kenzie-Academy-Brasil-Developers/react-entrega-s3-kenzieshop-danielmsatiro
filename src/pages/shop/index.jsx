@@ -1,6 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Container } from "./style";
-import { addToCartThunk } from "../../store/modules/cart/thunks";
+import {
+  addToCartThunk,
+  incrementToProductThunk,
+} from "../../store/modules/cart/thunks";
 
 export const Shop = () => {
   const { products, cart } = useSelector((store) => store);
@@ -12,13 +15,15 @@ export const Shop = () => {
 
   console.log(cart);
 
-  /* const incrementQuantity = () => {}; */
+  const incrementQuantity = (product) => {
+    dispatch(incrementToProductThunk(product));
+  };
 
   const handleShop = (product) => {
     if (cart.every((item) => item.id !== product.id)) {
-      return addNewProduct(product);
+      return addNewProduct({ ...product, quantity: 1 });
     }
-    /* aqui eu chamo a função incrementQuantity */
+    return incrementQuantity(product);
   };
 
   return (
